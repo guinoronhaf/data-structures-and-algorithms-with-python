@@ -228,4 +228,71 @@ for i in range(n):
 
 Como se trata de um loop, tem-se:
 
-$`T(n) = O(n) * O(1) = O(n)`$
+$`T(n) = O(n).O(1) = O(n)`$
+
+**2) Encontra a complexidade de tempo do trecho de código Python a seguir:**
+
+```python
+for i in range(n):
+    for j in range(n): # Esse loop também será executado n vezes
+        print("run")
+```
+
+Tem-se aqui loops aninhados:
+
+$`T(n) = O(n).O(n).O(1) = O(n.n) = O(n²)`$
+
+**3) Encontre a complexidade de tempo do trecho de código Pyhton a seguir:**
+
+```python
+for i in range(n):
+    for j in range(n):
+        print("run fun")
+        break
+```
+
+Percebe-se que aqui há um comando _break_. Isso indica que o comando _print_ do laço mais interno será invocado apenas **uma vez**.
+
+Tem-se, portanto:
+
+$`T(n) = O(n).O(1).O(1) = O(n)`$
+
+**4) Encontre a complexidade do trecho de código Python a seguir:**
+
+```python
+def fun(n):
+    for i in range(n):
+        print("data") # tempo constante
+    # o loop mais externo será executado n vezes
+    for i in range(n):
+        for j in range(n): # o loop mais interno será executado n vezes
+            print("run fun") # tempo constante
+```
+
+Primeiro loop:
+
+$`T'(n) = O(n).O(1) = O(n)`$
+
+Loops restantes:
+
+$`T''(n) = O(n).O(n).O(1) = O(n.n) = O(n²)`$
+
+Portanto:
+
+$`T(n) = T'(n) + T''(n) = O(n) + O(n²) = O(n²)`$
+
+**5) Encontre a complexidade de tempo deste trecho de código Pyhton:**
+
+```python
+if n == 0: # tempo constante
+    print("data")
+else:
+    for i in range(n):
+        print("structure")
+```
+
+Aqui, há um caso de desvio de código. O primeiro caso _if_ leva a operações primitivas, de ordem de complexidade _O(1)_. Como estamos levando em consideração o pior caso, vamos ao _else_, em que há um loop explícito.
+
+Assim:
+
+$`T(n) = O(n).O(1) = O(n)`$
