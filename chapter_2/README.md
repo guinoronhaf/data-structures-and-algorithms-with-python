@@ -84,26 +84,16 @@ Portanto:
 
 $`T(n) = O(F(n)) = O(n²)`$
 
-**4) Prove que $`F(n) = 2n³ - 6n \neq O(n²)`$.
+**4) Prove que $`F(n) = 2n³ - 6n \neq O(n²)`$.**
 
-$`F(n) = 2n³ - 6n`$
+Aqui, não se pode provar apenas que é _O(n³)_, já que _O(n³)_ inclui as funções de grau superior ou igual a ela.
 
-$`T(n) = n³`$
+Portanto, deve-se demonstrar que $`F(n) \neq O(n²)`$
 
-Tem-se que:
+Note que:
 
-$`2n³ - 6n \leq c.n³, n \geq n_0`$
-
-Assim:
-
-$`2n³ - 6n \leq 2n³, n \geq 1`$
+$`F(n) = 2n³ - 6n \geq n², \forall n /geq 1`$
 
 Portanto:
 
-$`c = 2`$
-
-$`n_0 = 1`$
-
-E:
-
-$`F(n) = O(T(n)) = O(n³) \neq O(n²)`$, pois _O(n²)_ é um conjunto que não inclui funcões cujo grau é 3.
+$`F(n) \neq O(n²)`$
