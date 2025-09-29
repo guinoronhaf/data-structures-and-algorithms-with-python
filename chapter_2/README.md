@@ -211,3 +211,21 @@ $`n_0 = 0`$
 Portanto:
 
 $`T(n) = \Omega(F(n)) = \Omega(n)`$
+
+### Cálculo de complexidade de tempo de execução de algoritmos
+
+Nem sempre é possível obter as complexidades dos casos melhor e médio. No entanto, é sempre bom conhecer a ordem de complexidade de pior caso, isto é, com a notação _Big O_.
+
+#### Exercícios
+
+**1) Encontre a complexidade de tempo de execução do pior caso do trecho de código Python a seguir:**
+
+```python
+# o loop será executado n vezes
+for i in range(n):
+    print("data") # tempo constante
+```
+
+Como se trata de um loop, tem-se:
+
+$`T(n) = O(n) * O(1) = O(n)`$
