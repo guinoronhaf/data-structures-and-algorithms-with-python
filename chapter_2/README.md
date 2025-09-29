@@ -200,7 +200,7 @@ Tem-se que:
 
 $`c.n \leq 3n, n \geq n_0`$
 
-$`1.n \leq 3n, n \geq 0`$, pois $`1 \l 3`$
+$`1.n \leq 3n, n \geq 0`$, pois $`1 \lt 3`$
 
 Assim:
 
