@@ -92,8 +92,34 @@ Portanto, deve-se demonstrar que $`F(n) \neq O(n²)`$
 
 Note que:
 
-$`F(n) = 2n³ - 6n \geq n², \forall n /geq 1`$
+$`F(n) = 2n³ - 6n \geq n², \forall n \geq 1`$
 
 Portanto:
 
 $`F(n) \neq O(n²)`$
+
+**5) Prove que $`20n² + 2n + 5 = O(n²)`$.**
+
+$`T(n) = 20n² + 2n + 5`$
+
+$`F(n) = n²`$
+
+Tem-se que:
+
+$`20n² + 2n + 5 \leq c.n², n \geq n_0`$
+
+Note que:
+
+$`20n² + 2n + 5 \leq 20n² + n², n \geq 4`$, pois $`2n + 5 \leq n², n \geq 4`$
+
+$`20n² + 2n + 5 \leq 21n², n \geq 4`$
+
+Assim:
+
+$`c = 21`$
+
+$`n_0 = 4`$
+
+E:
+
+$`T(n) = 20n² + 2n + 5 = O(F(n)) = O(n²)`$
