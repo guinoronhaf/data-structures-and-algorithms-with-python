@@ -6,7 +6,7 @@ Um algoritmo é considerado ótimo se ele devolve a saída esperada (conforme a 
 
 A análise de complexidade de tempo de execução pode ser feita de diversas formas, seja limitando a função que descreve o algoritmo superiormente, inferiormente ou de ambas as formas. Cada uma dessas abordagens é expressa a seguir:
 
-#### Notação _theta_($`\theta`$)
+#### Notação _theta_ ($`\theta`$)
 
 A notação _theta_ busca fornecer um limite restrito para a função que descreve o tempo de execução do algoritmo, limitando-a superior e inferiormente. Assim, sendo _T(n)_ a função que descreve o tempo de execução do algoritmo e _F(n)_, a função de _n_ tal que $`T(n) = \theta(F(n))`$, tem-se que:
 
@@ -137,3 +137,77 @@ $`n_0 = 4`$
 E:
 
 $`T(n) = 20n² + 2n + 5 = O(F(n)) = O(n²)`$
+
+#### Notação _ômega_ ($`\Omega`$)
+
+A notação ômega representa um limite de inferior, isto é, expõe o melhor caso do algoritmo. A ideia de conjunto para notações $`\Omega(n³)`$, por exemplo, continuam valendo como na notação _Big O_. Assim, sendo _T(n)_ a função que representa o tempo de execução do algoritmo e _F(n)_ sua classe de complexidade na notação _ômega_, tem-se que:
+
+$`c.(F(n)) \leq T(n), n \geq n_0`$
+
+##### Exercícios
+
+**1) Encontre _F(n)_ para a função $`T(n) = 2n² + 3`$ tal que $`T(n) = \Omega(F(n))`$.**
+
+$`T(n) = 2n² + 3`$
+
+$`F(n) = n²`$
+
+Assim:
+
+$`0 \leq c.n² \leq 2n² + 3, n \geq n_0`$
+
+$`0 \leq 2n² \leq 2n² + 3, n \geq 1`$
+
+Então:
+
+$`c = 2`$
+
+$`n_0 = 1`$
+
+Portanto:
+
+$`T(n) 2n² + 3 = \Omega(F(n)) = \Omega(n²)`$
+
+**2) Encontre o limite inferior para _T(n) = 3n²_.**
+
+$`T(n) = 3n²`$
+
+$`F(n) = n²`$
+
+Tem-se que:
+
+$`0 \leq c.n² \leq 3n², n \geq n_0`$
+
+$`0 \leq n² \leq 3n², n \geq 0`$
+
+Assim:
+
+$`c = 1`$
+
+$`n_0 = 0`$
+
+Portanto:
+
+$`T(n) = \Omega(F(n)) = \Omega(n²)`$
+
+**3) Prove que $`3n = \Omega(n)`$.**
+
+$`T(n) = 3n`$
+
+$`F(n) = n`$
+
+Tem-se que:
+
+$`c.n \leq 3n, n \geq n_0`$
+
+$`1.n \leq 3n, n \geq 0`$, pois $`1 \l 3`$
+
+Assim:
+
+$`c = 1`$
+
+$`n_0 = 0`$
+
+Portanto:
+
+$`T(n) = \Omega(F(n)) = \Omega(n)`$
