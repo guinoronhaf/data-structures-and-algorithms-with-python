@@ -296,3 +296,66 @@ Aqui, há um caso de desvio de código. O primeiro caso _if_ leva a operações 
 Assim:
 
 $`T(n) = O(n).O(1) = O(n)`$
+
+**6) Encontre a complexidade do trecho de código Python a seguir:**
+
+```python
+i = 1 # tempo constante
+j = 0 # tempo constante
+while i*i < n:
+    j = j + 1 # tempo constante
+    i = i + 1 # tempo constante
+    print("data") # tempo constante
+```
+
+Vamos considerar alguns casos aqui:
+
+$`n = 5 \rightarrow 2 iteraçoes`$
+
+$`n = 10 \rightarrow 3 iteraçoes`$
+
+$`n = 20 \rightarrow 4 iteraçoes`$
+
+Perceba que, pela condição do loop _while_, tem-se:
+
+$`i² \lt n \leftrightarrow i \lt \sqrt{n}`$
+
+Sendo _i_ a quantidade de iterações, segue que:
+
+$`T(n) = O(\sqrt{n})`$
+
+**7) Encontre a complexidade deste trecho de código Python:**
+
+```python
+i = 0
+for i in range(int(n/2), n):
+    j = 1
+    while j + n/2 <= n:
+        k = 1
+        while k < n:
+            k *= 2
+            print("data")
+            j += 1
+```
+
+Em primeiro lugar, é importante perceber que o loop mais externo, é executado $`\frac{n}{2}`$ vezes. Ou seja:
+
+$`T'(n) = O(\frac{n}{2}) = O(n)`$
+
+Mais adiante, tem-se o primeiro loop _while_, em que:
+
+$`j + \frac{n}{2} \leq n \leftrightarrow j \leq \frac{n}{2}`$
+
+$`T''(n) = O(\frac{n}{2}) = O(n)`$
+
+Por fim, _k_ parte de 1 até _n_, sendo dobrado a cada iteração:
+
+$`T'''(n) = O(\log_{n}{2})
+
+Portanto, como os laços são aninhados:
+
+$`T(n) = T'(n).T''(n).T'''(n)`$
+
+$`T(n) = O(\frac{n}{2}).O(\frac{n}{2}).O(\log_{n}{2})`$
+
+$`T(n) = O(n.n.\log_{n}{2}) = O(n²\log_{n}{2})
