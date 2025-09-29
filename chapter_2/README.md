@@ -1,10 +1,24 @@
 ## Análise de desempenho de algoritmos
 
+Um algoritmo é considerado ótimo se ele devolve a saída esperada (conforme a entrada requerida) dentro das restrições de tempo de execução e consumo de memória auxiliar. Uma das forma de analisar o tempo de execução, medida bastante importante, é observar a complexidade desse fator.
+
 ### Análise de tempo de execução
 
-#### Notação theta
+A análise de complexidade de tempo de execução pode ser feita de diversas formas, seja limitando a função que descreve o algoritmo superiormente, inferiormente ou de ambas as formas. Cada uma dessas abordagens é expressa a seguir:
 
-#### Notação Big O
+#### Notação _theta_($`\theta`$)
+
+A notação _theta_ busca fornecer um limite restrito para a função que descreve o tempo de execução do algoritmo, limitando-a superior e inferiormente. Assim, sendo _T(n)_ a função que descreve o tempo de execução do algoritmo e _F(n)_, a função de _n_ tal que $`T(n) = \theta(F(n))`$, tem-se que:
+
+$`0 \leq c_1.(F(n)) \leq T(n) \leq c_2.(F(n)), n \geq n_0`$
+
+#### Notação _Big O_
+
+A notação _Big O_ permite identificar um limite superior para a função que descreve o tempo de execução do algoritmo, de modo que, no pior caso, o tempo de execução daquele programa, esteja dentro daquela classe de complexidade. Vale ressaltar que a notação _O(n³)_, por exemplo, é um conjunto de funções polinomiais cujos graus são menores ou iguais a **3**. Sendo, portanto, _T(n)_ a função que descreve o tempo de execução do algoritmo e _F(n)_, a função de _n_ tal que _T(n) = O(F(n))_, tem-se:
+
+$`T(n) \leq c.F(n), n \geq n_0`$
+
+##### Exercícios
 
 **1) Encontre o limite superior da função $`T(n) = 2n + 7`$**.
 
