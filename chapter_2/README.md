@@ -350,12 +350,12 @@ $`T''(n) = O(\frac{n}{2}) = O(n)`$
 
 Por fim, _k_ parte de 1 até _n_, sendo dobrado a cada iteração:
 
-$`T'''(n) = O(\log_{n}{2})`$
+$`T'''(n) = O(\log_{2}{n})`$
 
 Portanto, como os laços são aninhados:
 
 $`T(n) = T'(n).T''(n).T'''(n)`$
 
-$`T(n) = O(n).O(n).O(\log_{n}{2})`$
+$`T(n) = O(n).O(n).O(\log_{2}{n})`$
 
-$`T(n) = O(n.n.\log_{n}{2}) = O(n²\log_{n}{2})`$
+$`T(n) = O(n.n.\log_{2}{n}) = O(n²\log_{2}{n})`$
