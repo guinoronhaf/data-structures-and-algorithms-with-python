@@ -356,6 +356,6 @@ Portanto, como os laços são aninhados:
 
 $`T(n) = T'(n).T''(n).T'''(n)`$
 
-$`T(n) = O(\frac{n}{2}).O(\frac{n}{2}).O(\log_{n}{2})`$
+$`T(n) = O(n).O(n).O(\log_{n}{2})`$
 
 $`T(n) = O(n.n.\log_{n}{2}) = O(n²\log_{n}{2})`$
