@@ -4,9 +4,9 @@ Compreender as técnicas de design de algoritmos é fundamental para entender me
 
 As principais técnicas de _desing_ abordadas aqui são:
 
- - [Divisão e Conquista](divisão-e-conquista)
- - [Programação dinâmica](programação-dinâmica)
- - [Algoritmos ganancioso](algoritmos-gananciosos)
+ - [Divisão e Conquista](#divisão-e-conquista)
+ - [Programação dinâmica](#programação-dinâmica)
+ - [Algoritmos gananciosos](#algoritmos-gananciosos)
 
 ## Divisão e conquista
 
