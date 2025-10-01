@@ -359,3 +359,98 @@ $`T(n) = T'(n).T''(n).T'''(n)`$
 $`T(n) = O(n).O(n).O(\log_{2}{n})`$
 
 $`T(n) = O(n.n.\log_{2}{n}) = O(n²\log_{2}{n})`$
+
+### Exercícios finais do capítulo
+
+**1) Encontra a complexidade dos trechos de código python a seguir:**
+
+**a)**
+
+```python
+i = 1
+while i < n:
+    i *= 2
+    print("data")
+```
+
+Note que:
+
+ - Para _n_ = 5, tem-se **3** iterações;
+ - Para _n_ = 10, tem-se **4** iterações;
+ - Para _n_ = 20, tem-se **5** iterações.
+
+Assim, tem-se que a cada vez que o tamanho da entrada _n_ é duplicado, o número _i_ de iterações aumenta em **uma** unidade.
+
+Dessa forma, assumindo que o _loop_ possui _k_ iterações, tem-se que:
+
+$`n \approx 2^{k} \leftrightarrow k \approx \log_{2}{n}`$
+
+Portanto:
+
+$`T(n) = O(\log_n{2}{n})`$
+
+**b)**
+
+```python
+i = n
+while i > 0:
+    print("complexity")
+    i /= 2
+```
+
+Note que:
+
+ - Para _n_ = 5, tem-se **3** iterações
+ - Para _n_ = 10, tem-se  **4** iterações
+ - Para _n_ = 20, tem-se **5** iterações
+
+Da mesma forma, tem-se que a cada vez que o tamanho da entrada _n_ é duplicado, o número _i_ de iterações aumenta em **uma** unidade.
+
+$`n \approx 2^{k} \leftrightarrow k \approx \log_{2}{n}`$
+
+Portanto:
+
+$`T(n) = O(\log_n{2}{n})`$
+
+**c)**
+
+```python
+for i in range(1, n):
+    j = i
+    while j < n:
+        j *= 2
+```
+
+Analisando complexidade do laço mais externo:
+
+$`T'(n) = O(n)`$
+
+Analisando complexidade do laço mais interno:
+
+$`T''(n) = \log_n{2}{n} + (\log_n{2}{n} - 1) + (\log_n{2}{n} - 2) + ... + 1`$
+
+$`= \frac{\log_{2}{n}.(\log_{2}{n} + 1)}{2} \approx (\log_{2}{n})²`$
+
+$`T''(n) = O((\log_{2}{n})²)
+
+Sendo os laços aninhados:
+
+$`T(n) = T'(n).T''(n)`$ = O(n).O((\log_{2}{n})²) = O(n.(\log_{2}{n})²)`$
+
+**d)**
+
+```python
+i = 1
+while i < n:
+    print("python")
+    i = i ** 2
+```
+
+Note que:
+
+ - Para _n_ = 5, tem-se **2** iterações
+ - Para _n_ = 10, tem-se **2** iterações
+ - Para _n_ = 20, tem-se **3** iterações
+ - Para _n_ = 40, tem-se **5** iterações
+
+Livro meio confuso nas letras c) e d).
