@@ -55,3 +55,9 @@ for i in range(6):
 Após essa mudança, temos que, no pior caso, teremos que fazer o cálculo pelo menos uma vez para cada um dos _n_ elementos em _fib(n)_. Assim, a complexidade se torna _O(n)_.
 
 ## Algoritmos gananciosos
+
+Em geral, algoritmos ganaciosos são aqueles em que seleciona-se a melhor opção possível (solução ótima) a cada etapa de execução do algoritmo. Dessa forma, é bastante provável que, ao final da execução, considerando as **soluções ótimas locais**, obtenha-se uma **solução ótima global**, ou algo próximo disso.
+
+O **algoritmo de menor caminho de Dijkstra** é um bom exemplo de algoritmo ganacioso. A cada etapa, seleciona-se o menor caminho para determinado nó/vértice de um grafo.
+
+Um exemplo clássico é o da **mochila com pesos**, em que deve-se maximizar o valor dos elementos dentro de uma mochila, respeitando certo limite de peso.
